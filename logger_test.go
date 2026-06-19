@@ -10,7 +10,7 @@ import (
 	"testing"
 	"time"
 
-	gologging "github.com/pucora/velonetics-gologging/v2"
+	gologging "github.com/pucora/pucora-gologging/v2"
 	"github.com/pucora/lura/v2/config"
 	"github.com/pucora/lura/v2/logging"
 )

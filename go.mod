@@ -1,11 +1,11 @@
-module github.com/pucora/velonetics-logstash/v2
+module github.com/pucora/pucora-logstash/v2
 
 go 1.23.0
 
 toolchain go1.24.5
 
 require (
-	github.com/pucora/velonetics-gologging/v2 v2.0.0
+	github.com/pucora/pucora-gologging/v2 v2.0.0
 	github.com/pucora/lura/v2 v2.0.0
 )
 

@@ -1,4 +1,4 @@
-// Package logstash provides a logstash formatter for the velonetics-gologging pkg
+// Package logstash provides a logstash formatter for the pucora-gologging pkg
 package logstash
 
 import (
@@ -9,17 +9,17 @@ import (
 	"os"
 	"time"
 
-	gologging "github.com/pucora/velonetics-gologging/v2"
+	gologging "github.com/pucora/pucora-gologging/v2"
 	"github.com/pucora/lura/v2/config"
 	"github.com/pucora/lura/v2/logging"
 	"github.com/pucora/lura/v2/proxy"
 )
 
-const Namespace = "github_com/pucora/velonetics-logstash"
+const Namespace = "github_com/pucora/pucora-logstash"
 
 var (
 	ErrNothingToLog = errors.New("nothing to log")
-	ErrWrongConfig  = fmt.Errorf("getting the extra config for the velonetics-logstash module")
+	ErrWrongConfig  = fmt.Errorf("getting the extra config for the pucora-logstash module")
 	hostname        = "localhost"
 	loggingPattern  = "%{message}"
 )
@@ -37,7 +37,7 @@ func NewLogger(cfg config.ExtraConfig, ws ...io.Writer) (logging.Logger, error) 
 	if !ok {
 		return nil, ErrWrongConfig
 	}
-	serviceName := "VELONETICS"
+	serviceName := "PUCORA"
 	gologging.DefaultPattern = loggingPattern
 
 	// creating a copy of the config to avoid changing the original one
