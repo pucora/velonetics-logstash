@@ -10,9 +10,9 @@ import (
 	"testing"
 	"time"
 
-	gologging "github.com/velonetics/velonetics-gologging/v2"
-	"github.com/velonetics/lura/v2/config"
-	"github.com/velonetics/lura/v2/logging"
+	gologging "github.com/pucora/velonetics-gologging/v2"
+	"github.com/pucora/lura/v2/config"
+	"github.com/pucora/lura/v2/logging"
 )
 
 func TestNewLogger(t *testing.T) {

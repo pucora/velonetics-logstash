@@ -9,13 +9,13 @@ import (
 	"os"
 	"time"
 
-	gologging "github.com/velonetics/velonetics-gologging/v2"
-	"github.com/velonetics/lura/v2/config"
-	"github.com/velonetics/lura/v2/logging"
-	"github.com/velonetics/lura/v2/proxy"
+	gologging "github.com/pucora/velonetics-gologging/v2"
+	"github.com/pucora/lura/v2/config"
+	"github.com/pucora/lura/v2/logging"
+	"github.com/pucora/lura/v2/proxy"
 )
 
-const Namespace = "github_com/velonetics/velonetics-logstash"
+const Namespace = "github_com/pucora/velonetics-logstash"
 
 var (
 	ErrNothingToLog = errors.New("nothing to log")
@@ -31,7 +31,7 @@ func init() {
 	}
 }
 
-// NewLogger returns a velonetics logger wrapping a gologging logger
+// NewLogger returns a pucora logger wrapping a gologging logger
 func NewLogger(cfg config.ExtraConfig, ws ...io.Writer) (logging.Logger, error) {
 	_, ok := cfg[Namespace]
 	if !ok {
@@ -70,7 +70,7 @@ func NewLogger(cfg config.ExtraConfig, ws ...io.Writer) (logging.Logger, error) 
 	return &Logger{loggr, serviceName}, nil
 }
 
-// Logger is a wrapper over a github.com/velonetics/velonetics/logging logger
+// Logger is a wrapper over a github.com/pucora/pucora/logging logger
 type Logger struct {
 	logger      logging.Logger
 	serviceName string

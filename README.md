@@ -1,2 +1,2 @@
 # velonetics-logstash
-A Velonetics log formatter compatible with logstash
+A Pucora log formatter compatible with logstash
